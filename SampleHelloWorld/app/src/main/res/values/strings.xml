@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- application mame -->
+    <string name="app_name">Sample HelloWorld</string>
+    <string name="hello_world">Welcome to UW!</string>
+    <!-- string for menu action icon -->
+    <string name="action_settings">Settings</string>
+    <!-- title for second screen -->
+    <string name="title_activity_second">Second Activity</string>
+    <!-- string on second screen -->
+    <string name="second_screen_string">Here is my second screen</string>
+    <!-- title for second screen -->
+    <string name="title_activity_third">Third Activity</string>
+    <!-- string on second screen -->
+    <string name="third_screen_string">Here is my third screen</string>
+
+</resources>
