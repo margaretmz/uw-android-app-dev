@@ -1,0 +1,118 @@
+<!-- main screen layout landscape mode -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/orange">
+
+    <!-- TextView -->
+    <TextView
+        android:id="@+id/textview1"
+        android:text="@string/textview_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textview_2"
+        android:layout_margin="12dp"
+        android:padding="12dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/green"
+        android:background="@color/purple"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/photo"
+            android:scaleType="centerCrop" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="food"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center_horizontal|bottom"/>
+        </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 1"
+            android:textColor="@color/purple"
+            android:textSize="18sp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 2"
+            android:layout_weight="1"
+            android:textColor="@color/purple"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_av_play_arrow"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green">
+
+        <TextView
+            android:id="@+id/textView1RL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text 1" />
+
+        <TextView
+            android:id="@+id/textview2RL"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/textView1RL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text 2" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/textview3RL"
+            android:layout_below="@id/textView1RL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text 3"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+</LinearLayout>
