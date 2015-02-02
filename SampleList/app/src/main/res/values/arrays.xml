@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="androidapis" >
+        <item>Cupcake</item>
+        <item>Donut</item>
+        <item>Éclair</item>
+        <item>Froyo</item>
+        <item>Gingerbread</item>
+        <item>Honeycomb</item>
+        <item>Ice Cream Sandwich</item>
+        <item>Jelly Bean</item>
+        <item>Kitkat</item>
+        <item>Lollipop</item>
+    </string-array>
+
+</resources>
+
+
+
+
+
+
+
+
+
+

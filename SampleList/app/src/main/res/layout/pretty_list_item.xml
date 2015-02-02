@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textViewPrettyList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:textAppearanceLarge"
+    android:text="Android Name"
+    android:background="@color/green"
+    android:padding="10dp"
+    android:textColor="@color/white"/>

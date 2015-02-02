@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- An Android icon -->
+    <ImageView
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_android"/>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Android API Name: i.e. Lollipop -->
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/textViewAPIName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:textAppearance="?android:textAppearanceLarge"/>
+        <!-- Android API Level: 21 -->
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/textViewAPIlevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="api level"
+            android:textAppearance="?android:textAppearanceMedium"/>
+
+    </LinearLayout>
+
+</LinearLayout>
