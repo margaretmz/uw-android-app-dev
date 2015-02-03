@@ -17,8 +17,9 @@
         android:textAppearance="?android:textAppearanceLarge"
         android:layout_marginBottom="12dp"/>
 
+    <!-- You must use @android:id/list if using ListActivity-->
     <ListView
-        android:id="@+id/listViewSimple"
+        android:id="@android:id/list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
