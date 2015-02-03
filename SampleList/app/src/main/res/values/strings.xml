@@ -2,9 +2,11 @@
 <resources>
 
     <string name="app_name">Sample List</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_simple_list">SimpleList</string>
     <string name="title_activity_fancy_list">FancyListActivity</string>
+    <string name="simple_list_desc">This list uses the default Android list item layout: android.R.layout.simple_list_item_1</string>
+    <string name="pretty_list_desc">This list uses my own list item layout with one single TextView that can be styled.</string>
+    <string name="fancy_list_desc">This list uses a custom ArrayAdapter.</string>
 
 </resources>

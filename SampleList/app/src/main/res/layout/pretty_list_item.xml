@@ -7,5 +7,5 @@
     android:textAppearance="?android:textAppearanceLarge"
     android:text="Android Name"
     android:background="@color/green"
-    android:padding="10dp"
-    android:textColor="@color/white"/>
+    android:textColor="@color/white"
+    android:paddingBottom="10dp"/>

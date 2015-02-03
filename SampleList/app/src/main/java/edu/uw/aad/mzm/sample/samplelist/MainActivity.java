@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 
+/**
+ * Created by Margaret on 2/2/2015
+ * This sample app demos how to create lists in Android
+ */
 public class MainActivity extends ActionBarActivity implements View.OnClickListener{
 
     @Override
