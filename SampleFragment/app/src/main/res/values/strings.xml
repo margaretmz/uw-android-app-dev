@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SampleFragment</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_study">A ViewPager</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_test">Tests</string>
+    <string name="word_of_day_label">WORD OF DAY</string>
+    <string name="title_activity_new">NewActivity</string>
+
+    <string-array name="holidays">
+        <item>Spring Festival	春节</item>
+        <item>Dragon Boat Festival	端午节</item>
+        <item>Moon Festival	中秋节</item>
+        <item>Independence Day	美国国庆节</item>
+        <item>Labor Day	劳动节</item>
+    </string-array>
+
+</resources>

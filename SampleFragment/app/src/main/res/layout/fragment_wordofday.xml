@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WordofDayFragment" >
+
+    <TextView
+        android:id="@+id/wordofday_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:gravity="center_horizontal"
+        android:text="@string/word_of_day_label"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/wordofday_content"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/wordofday_label"
+        android:background="@color/gray"
+        android:gravity="center_horizontal|center_vertical"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
