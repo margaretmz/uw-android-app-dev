@@ -20,13 +20,6 @@ public class MainActivity extends ActionBarActivity {
 
         // Create the adapter that will return a fragment for each ViewPager section
         mAppSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-/*
-
-        // Set up the action bar, use getSupportActionBar() for backwards compatibility
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.ic_launcher);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
-*/
 
         // Set up the ViewPager
         mViewPager = (ViewPager) findViewById(R.id.pager);
