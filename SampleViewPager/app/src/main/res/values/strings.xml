@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SampleViewPager</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="colors">
+        <item>Red 红色</item>
+        <item>Orange 橙</item>
+        <item>Yellow 黄色</item>
+        <item>Green	绿色</item>
+        <item>Blue 蓝色</item>
+    </string-array>
+    <string-array name="numbers">
+        <item>One 一</item>
+        <item>Two 二</item>
+        <item>Three 三</item>
+        <item>Four 四</item>
+        <item>Five 五</item>
+        <item>Six 六</item>
+        <item>Seven	七</item>
+        <item>Eight	八</item>
+        <item>Nine 九</item>
+        <item>Ten 十</item>
+    </string-array>
+    <string-array name="holidays">
+        <item>Spring Festival	春节</item>
+        <item>Dragon Boat Festival	端午节</item>
+        <item>Moon Festival	中秋节</item>
+        <item>Independence Day	美国国庆节</item>
+        <item>Labor Day	劳动节</item>
+    </string-array>
+
+</resources>
