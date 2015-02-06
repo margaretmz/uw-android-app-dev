@@ -1,11 +1,23 @@
 package edu.uw.aad.mzm.sample.settings;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-
+/**
+ * Created by margaret on 2/6/2015
+ * This sample app shows you how to create a Settings screen
+ *
+ * 1. Create folder /xml under values
+ * 2. Create a xml file called settings.xml with root PreferenceScreen (create strings in Strings.xml)
+ * 3. Create SettingsFragment that extends from PreferenceFragment
+ * 4. Create SettingsActivity to host SettingsFragment
+ * 5. Add menu item (menu_main.xml & MainActivity.java) to access the Settings screen
+ * 6. Update MainActivity.java to reflect what users has chosen on the Settings screen
+ *
+ */
 public class MainActivity extends ActionBarActivity {
 
     @Override
@@ -31,7 +43,8 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent intent =  new Intent(this,SettingsActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

@@ -2,7 +2,39 @@
 <resources>
 
     <string name="app_name">SampleSettings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="main_desc">This sample app shows you how to create a Settings screen</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Push notification CheckBoxPreference -->
+    <string name="pref_key_notification">notification</string>
+    <string name="pref_title_notification">Push Notification</string>
+    <string name="pref_summary_notification">Get notifications for new stories</string>
+
+    <!-- Country EditTextPreference -->
+    <string name="pref_key_country">country</string>
+    <string name="pref_title_country">Country</string>
+    <string name="pref_dialog_title_country">Please enter a country</string>
+
+    <!-- City ListPreference-->
+    <string name="pref_key_city">city</string>
+    <string name="pref_title_city">City</string>
+    <string name="pref_dialog_title_city">Please select a city</string>
+
+    <!-- An array of city list: what user sees in the UI -->
+    <string-array name="city_list">
+        <item>Chicago</item>
+        <item>New York</item>
+        <item>Seattle</item>
+        <item>San Francisco</item>
+    </string-array>
+
+    <!-- An array of city list values: what actually gets stored -->
+    <string-array name="city_list_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
 
 </resources>

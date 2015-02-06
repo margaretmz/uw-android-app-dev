@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="@string/pref_key_notification"
+        android:title="@string/pref_title_notification"
+        android:summary="@string/pref_summary_notification"
+        android:defaultValue="true" />
+
+    <EditTextPreference
+        android:key="@string/pref_key_country"
+        android:title="@string/pref_title_country"
+        android:dialogTitle="@string/pref_dialog_title_country"/>
+
+    <!-- A list of cities to choose from, default on #3 (Seattle) -->
+    <ListPreference
+        android:key="@string/pref_key_city"
+        android:title="@string/pref_title_city"
+        android:dialogTitle="@string/pref_dialog_title_city"
+        android:entries="@array/city_list"
+        android:entryValues="@array/city_list_values"
+        android:defaultValue="3"/>
+
+</PreferenceScreen>
