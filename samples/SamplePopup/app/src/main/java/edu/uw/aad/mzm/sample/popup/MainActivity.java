@@ -14,6 +14,10 @@ import android.widget.Toast;
 
 /**
  * Created by Margaret on 1/26/2015
+ * This sample app shows you how to create
+ * - a Toast
+ * - a PopupWindow
+ * - an AlertDialog
  */
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
