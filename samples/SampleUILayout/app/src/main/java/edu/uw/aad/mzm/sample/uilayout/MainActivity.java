@@ -10,6 +10,13 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * Created by Margaret on 1/12/1015
+ * This sample app shows you
+ * - TextView, Button, ImageButton
+ * - how to use Android layout containers (LinearLayout, RelativeLayout & FrameLayout)
+ * - how to position the Views in the layouts
+ */
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
     @Override
