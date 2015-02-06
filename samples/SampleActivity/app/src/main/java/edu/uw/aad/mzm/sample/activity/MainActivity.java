@@ -6,6 +6,10 @@
  import android.view.Menu;
  import android.view.MenuItem;
 
+ /**
+  * Created by Margaret on 1/12/2015
+  * This sample app shows you how to log Android Activity lifecycle
+  */
 public class MainActivity extends ActionBarActivity {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
