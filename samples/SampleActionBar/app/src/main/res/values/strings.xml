@@ -3,7 +3,7 @@
 
     <string name="app_name">SampleActionBar</string>
     <string name="about_screen_desc">This sample app is all about the ActionBar...</string>
-    <string name="main_screen_desc">From this sample app, you will learn how to customize the actionBar: show the app logo,
+    <string name="app_desc">This sample app hows you how to customize the actionBar: show the app logo,
         change the background and configure the menu items</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_about">About</string>
