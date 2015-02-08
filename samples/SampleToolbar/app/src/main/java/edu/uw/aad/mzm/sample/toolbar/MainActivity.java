@@ -9,7 +9,7 @@ import android.view.MenuItem;
 /**
  * Created by margaret on 2/6/2015
  *
- * This sample app shows you how to create a toolbar
+ * This sample app shows you how to create a toolbar as an ActionBar
  *
  * 1. Add ToolBar directly in layout xml (or create a separate layout file, then use include)
  * 2. Remove actionbar - in styles.xml  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
