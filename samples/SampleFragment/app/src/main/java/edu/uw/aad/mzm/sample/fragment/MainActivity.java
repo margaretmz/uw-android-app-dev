@@ -12,7 +12,7 @@ import android.widget.Button;
 /**
  * @author margaret
  * February 22, 2014
- * Sample Code that demonstrates the concept of fragment & actionbar 
+ * Sample Code that demonstrates how to create and add a fragment
  */
 public class MainActivity extends ActionBarActivity implements OnClickListener {
 
@@ -21,12 +21,12 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-        Button buttonDynamicFragment = (Button)findViewById(R.id.buttonShowHideFragActivity);
-		buttonDynamicFragment.setOnClickListener(this);
+        Button buttonShowHideFrag = (Button)findViewById(R.id.buttonShowHideFragActivity);
+		buttonShowHideFrag.setOnClickListener(this);
 
         findViewById(R.id.buttonNewActivity).setOnClickListener(this);
 		
-		// add word of day fragment by code
+		// add WordofDayFragment by code
 		FragmentManager fragmentManager = getFragmentManager();
 		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 		WordofDayFragment fragment = new WordofDayFragment();
@@ -42,7 +42,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		Intent i = new Intent();
 
 		switch(v.getId()){
-            // go to an activity that demos how to add a fragment dynamically
+            // go to an activity that demos how to show/hide a fragment dynamically
 			case R.id.buttonShowHideFragActivity:
 				i.setClass(this, ShowHideFragmentActivity.class);
 				startActivity(i);
