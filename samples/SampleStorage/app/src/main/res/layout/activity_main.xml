@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_description"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Please enter some text here..."
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/buttonInternalWrite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/internal_storage_write"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/buttonInternalRead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/internal_storage_read"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/buttonExternalWrite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/external_storage_write"
+        android:layout_marginBottom="16dp"  />
+
+    <Button
+        android:id="@+id/buttonExternalRead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/external_storage_read"
+        android:layout_marginBottom="16dp"  />
+
+</LinearLayout>
