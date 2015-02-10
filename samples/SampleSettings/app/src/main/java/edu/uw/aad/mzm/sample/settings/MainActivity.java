@@ -31,7 +31,7 @@ public class MainActivity extends ActionBarActivity {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
         String country = prefs.getString("country", "");
-        int city = Integer.parseInt(prefs.getString("city", ""));
+        String city = prefs.getString("city", "");
         boolean getNotification = prefs.getBoolean("notification", true);
 
         TextView textViewNotification = (TextView)findViewById(R.id.textViewNotification);
@@ -49,9 +49,7 @@ public class MainActivity extends ActionBarActivity {
         textViewCountry.setText(country);
 
         // City
-        String[] cities = getResources().getStringArray(R.array.city_list);
-        textViewCity.setText(cities[city-1]);
-
+        textViewCity.setText(city);
     }
 
     @Override

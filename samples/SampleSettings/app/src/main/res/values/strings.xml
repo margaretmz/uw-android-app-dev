@@ -29,12 +29,14 @@
         <item>San Francisco</item>
     </string-array>
 
-    <!-- An array of city list values: what actually gets stored -->
-    <string-array name="city_list_values">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
+    <string-array name="units">
+        <item>Pound</item>
+        <item>Kilogram</item>
+    </string-array>
+    <!-- What actually gets stored in the SharedPreference xml -->
+    <string-array name="units_values">
+        <item>lb</item>
+        <item>kg</item>
     </string-array>
 
 </resources>

@@ -29,7 +29,8 @@
         android:layout_below="@id/textViewAppDesc"
         android:layout_toRightOf="@id/textViewNotificationLabel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="placeholder notification choice"/>
 
     <!-- Country -->
     <TextView
@@ -46,7 +47,8 @@
         android:layout_below="@id/textViewNotification"
         android:layout_toRightOf="@id/textViewCountryLabel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="placeholder country"/>
 
     <!-- City -->
     <TextView
@@ -62,6 +64,7 @@
         android:layout_below="@id/textViewCountry"
         android:layout_toRightOf="@id/textViewCityLabel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="placeholder city"/>
 
 </RelativeLayout>

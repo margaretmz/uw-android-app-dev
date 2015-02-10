@@ -9,6 +9,7 @@
     <EditTextPreference
         android:key="@string/pref_key_country"
         android:title="@string/pref_title_country"
+        android:summary="Please enter a country"
         android:dialogTitle="@string/pref_dialog_title_country"/>
 
     <!-- A list of cities to choose from, default on #3 (Seattle) -->
@@ -17,7 +18,13 @@
         android:title="@string/pref_title_city"
         android:dialogTitle="@string/pref_dialog_title_city"
         android:entries="@array/city_list"
-        android:entryValues="@array/city_list_values"
+        android:entryValues="@array/city_list"
         android:defaultValue="3"/>
+
+    <ListPreference
+        android:key="units"
+        android:title="Units"
+        android:entries="@array/units"
+        android:entryValues="@array/units_values" />
 
 </PreferenceScreen>
