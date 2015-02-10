@@ -52,4 +52,18 @@
         android:text="@string/external_storage_read"
         android:layout_marginBottom="16dp"  />
 
+    <Button
+        android:id="@+id/buttonPrefsWrite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save to Prefs"
+        android:layout_marginBottom="16dp"  />
+
+    <Button
+        android:id="@+id/buttonPrefsRead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Read from Prefs"
+        android:layout_marginBottom="16dp"  />
+
 </LinearLayout>

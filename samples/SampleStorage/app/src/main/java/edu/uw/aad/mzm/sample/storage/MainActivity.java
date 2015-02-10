@@ -1,7 +1,9 @@
 package edu.uw.aad.mzm.sample.storage;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.EditText;
@@ -31,6 +33,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     // A file on the external storage
     File mExternalFile;
 
+    private SharedPreferences mPrefs;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +59,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         } else {
             Toast.makeText(this, "No external storage available!", Toast.LENGTH_SHORT).show();
         }
+
+        mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+
     }
 
     @Override
@@ -89,6 +96,15 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 } else {
                     makeAToast(getResources().getString(R.string.nothing_to_read));
                 }
+                break;
+            case R.id.buttonPrefsWrite:
+                SharedPreferences.Editor editor = mPrefs.edit();
+                editor.putString("input", stringToFile);
+                editor.commit();
+                break;
+            case R.id.buttonPrefsRead:
+                stringFromFile = mPrefs.getString("input", "");
+                makeAToast("Read from SharedPreferences" + stringFromFile);
                 break;
         }
     }
