@@ -1,10 +1,13 @@
 package edu.uw.aad.mzm.sample.settings;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 /**
  * Created by margaret on 2/6/2015
@@ -24,8 +27,32 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+        String country = prefs.getString("country", "");
+        int city = Integer.parseInt(prefs.getString("city", ""));
+        boolean getNotification = prefs.getBoolean("notification", true);
+
+        TextView textViewNotification = (TextView)findViewById(R.id.textViewNotification);
+        TextView textViewCountry = (TextView)findViewById(R.id.textViewCountry);
+        TextView textViewCity = (TextView)findViewById(R.id.textViewCity);
+
+        // Notification choice
+        if(getNotification) {
+            textViewNotification.setText("Yes");
+        } else {
+            textViewNotification.setText("No");
+        }
+
+        // Country
+        textViewCountry.setText(country);
+
+        // City
+        String[] cities = getResources().getStringArray(R.array.city_list);
+        textViewCity.setText(cities[city-1]);
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

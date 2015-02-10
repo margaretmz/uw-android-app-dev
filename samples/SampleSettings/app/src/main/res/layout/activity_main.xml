@@ -9,9 +9,59 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textViewAppDesc"
         android:text="@string/main_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:textAppearanceMedium"/>
+
+    <!-- Notification -->
+    <TextView
+        android:id="@+id/textViewNotificationLabel"
+        android:layout_below="@id/textViewAppDesc"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Receive notification?"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/textViewNotification"
+        android:layout_below="@id/textViewAppDesc"
+        android:layout_toRightOf="@id/textViewNotificationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Country -->
+    <TextView
+        android:id="@+id/textViewCountryLabel"
+        android:layout_below="@id/textViewNotification"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Country:"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textViewCountry"
+        android:layout_below="@id/textViewNotification"
+        android:layout_toRightOf="@id/textViewCountryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- City -->
+    <TextView
+        android:id="@+id/textViewCityLabel"
+        android:layout_below="@id/textViewCountry"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City:"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/textViewCity"
+        android:layout_below="@id/textViewCountry"
+        android:layout_toRightOf="@id/textViewCityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
