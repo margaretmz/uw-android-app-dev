@@ -1,0 +1,59 @@
+package edu.uw.aad.mzm.sample.database;
+
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
+import edu.uw.aad.mzm.sample.database.data.AndroidDbHelper;
+import edu.uw.aad.mzm.sample.database.model.AndroidVersion;
+
+/**
+ * Created by Margaret on 2/19/2015
+ * This sample app demos how to create a SQLite database in Android
+ *
+ * 1. Create a class that defines the database schema
+ * 2. Create a class that extends SQLiteOpenHelper
+ * 3.
+ */
+public class MainActivity extends ActionBarActivity {
+
+    private AndroidDbHelper mDbHelper;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mDbHelper = new AndroidDbHelper(this);
+
+        // Add a few Android versions
+        mDbHelper.insertAndroidVersion(new AndroidVersion("Cupcake", "1.5", "API 3", "April 2009", "Support for Widgets"));
+        mDbHelper.insertAndroidVersion(new AndroidVersion("Donut", "1.6", "API 4", "September 2009", "Improvements in search"));
+        mDbHelper.insertAndroidVersion(new AndroidVersion("Éclair", "2.0-2.1", "API 5-7", "Oct 2009 - Jan 2010", "Improvements in Google Maps"));
+
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
