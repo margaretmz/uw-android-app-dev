@@ -41,6 +41,7 @@ public class MainActivity extends ActionBarActivity {
         mDbHelper.insertAndroidVersion(new AndroidVersion("Donut", "1.6", "API 4", "September 2009", "Improvements in search"));
         mDbHelper.insertAndroidVersion(new AndroidVersion("Éclair", "2.0-2.1", "API 5-7", "Oct 2009 - Jan 2010", "Improvements in Google Maps"));
 
+        // Get all the Android Versions data from db
         androidVersionList = mDbHelper.getAndroidVersions();
 
         // Set up UI ListView
