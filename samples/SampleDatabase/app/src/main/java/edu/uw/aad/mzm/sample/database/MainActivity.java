@@ -1,9 +1,13 @@
 package edu.uw.aad.mzm.sample.database;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.List;
 
 import edu.uw.aad.mzm.sample.database.data.AndroidDbHelper;
 import edu.uw.aad.mzm.sample.database.model.AndroidVersion;
@@ -14,11 +18,14 @@ import edu.uw.aad.mzm.sample.database.model.AndroidVersion;
  *
  * 1. Create a class that defines the database schema
  * 2. Create a class that extends SQLiteOpenHelper
- * 3.
+ * 3. Use the Database helper class to create & manage db
  */
 public class MainActivity extends ActionBarActivity {
 
     private AndroidDbHelper mDbHelper;
+    private List<AndroidVersion> androidVersionList;
+    private ListView mListViewAndroid;
+    private ArrayAdapter<AndroidVersion> mAndroidArrayAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +39,15 @@ public class MainActivity extends ActionBarActivity {
         mDbHelper.insertAndroidVersion(new AndroidVersion("Donut", "1.6", "API 4", "September 2009", "Improvements in search"));
         mDbHelper.insertAndroidVersion(new AndroidVersion("Éclair", "2.0-2.1", "API 5-7", "Oct 2009 - Jan 2010", "Improvements in Google Maps"));
 
-    }
+        androidVersionList = mDbHelper.getAndroidVersions();
 
+        // Set up UI ListView
+        mListViewAndroid = (ListView)findViewById(R.id.listViewAndroid);
+        mAndroidArrayAdapter = new ArrayAdapter<AndroidVersion>(this,  // context
+                android.R.layout.simple_list_item_1,                        // UI layout
+                androidVersionList);                                                     // objects
+        mListViewAndroid.setAdapter(mAndroidArrayAdapter);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

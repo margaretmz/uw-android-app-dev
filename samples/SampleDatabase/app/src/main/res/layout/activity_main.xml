@@ -9,8 +9,16 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textViewHeader"
         android:text="@string/app_desc"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
+    <ListView
+        android:id="@+id/listViewAndroid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewHeader" />
 
 </RelativeLayout>

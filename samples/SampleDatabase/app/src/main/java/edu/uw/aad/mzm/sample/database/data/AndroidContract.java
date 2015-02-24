@@ -7,7 +7,7 @@ import android.provider.BaseColumns;
  *
  * Contains static classes to define table schema etc.
  */
-public class Android implements BaseColumns {
+public class AndroidContract implements BaseColumns {
 
     public static final String DATABASE_NAME = "android";
 
@@ -29,12 +29,12 @@ public class Android implements BaseColumns {
 
         // Define projection for Version table
         public static final String[] PROJECTION = new String[] {
-                /*0*/ Android.Version.ID,
-                /*1*/ Android.Version.CODE_NAME,
-                /*2*/ Android.Version.VERSION_NO,
-                /*3*/ Android.Version.API_LEVEL,
-                /*4*/ Android.Version.RELEASE_DATE,
-                /*5*/ Android.Version.FEATURES
+                /*0*/ AndroidContract.Version.ID,
+                /*1*/ AndroidContract.Version.CODE_NAME,
+                /*2*/ AndroidContract.Version.VERSION_NO,
+                /*3*/ AndroidContract.Version.API_LEVEL,
+                /*4*/ AndroidContract.Version.RELEASE_DATE,
+                /*5*/ AndroidContract.Version.FEATURES
         };
     }
 }
