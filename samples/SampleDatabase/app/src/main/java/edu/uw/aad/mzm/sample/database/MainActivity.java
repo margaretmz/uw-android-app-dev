@@ -1,5 +1,6 @@
 package edu.uw.aad.mzm.sample.database;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -9,6 +10,7 @@ import android.widget.ListView;
 
 import java.util.List;
 
+import edu.uw.aad.mzm.sample.database.data.AndroidContract;
 import edu.uw.aad.mzm.sample.database.data.AndroidDbHelper;
 import edu.uw.aad.mzm.sample.database.model.AndroidVersion;
 
@@ -64,7 +66,13 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_delete_all) {
+            SQLiteDatabase db = mDbHelper.getWritableDatabase();
+            db.delete(AndroidContract.Version.TABLE_NAME, null, null);
+            db.close();
+            mAndroidArrayAdapter.clear();
+            mAndroidArrayAdapter.addAll(mDbHelper.getAndroidVersions());
+            mAndroidArrayAdapter.notifyDataSetChanged();
             return true;
         }
 

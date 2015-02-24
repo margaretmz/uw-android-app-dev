@@ -37,4 +37,12 @@ public class AndroidContract implements BaseColumns {
                 /*5*/ AndroidContract.Version.FEATURES
         };
     }
+
+
+    public static final class Device {
+
+        public static final String TABLE_NAME = "device";
+        public static final String NAME = "name";
+        public static final String ANDROID_VERSION = "android_version";
+    }
 }

@@ -43,7 +43,7 @@ public class AndroidDbHelper extends SQLiteOpenHelper {
                     VERSION_ROW_CODE_NAME + " TEXT, " +
                     VERSION_ROW_VERSION_NO + " TEXT, " +
                     VERSION_ROW_API_LEVEL + " TEXT, " +
-                    VERSION_ROW_RELEASE_DATE + " TEXT, " +
+                    VERSION_ROW_RELEASE_DATE + "TEXT, " +
                     VERSION_ROW_FEATURES + " TEXT" + ");";
 
     public AndroidDbHelper(Context context) {
