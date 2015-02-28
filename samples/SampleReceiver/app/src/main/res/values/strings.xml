@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SampleReceiver</string>
+
+    <string name="app_desc">This sample app monitors network connection status by listening to the Android system broadcast.
+        Enable/disable wi-fi connection on device, a toast will then pop up indicating network connection status change.</string>
+    <string name="action_settings">Settings</string>
+</resources>
