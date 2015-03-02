@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:gravity="center">
+
+    <!--App description-->
+    <TextView
+        android:id="@+id/textViewAppDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_desc"
+        android:layout_marginBottom="16dp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="240dp"
+        android:layout_height="160dp"
+        android:layout_below="@id/textViewAppDesc"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="1px"
+        android:background="#CCCCCC"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:id="@+id/buttonCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_camera"
+        android:drawablePadding="-10sp"
+        android:text="@string/camera"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_below="@id/imageView"
+        android:layout_alignLeft="@id/imageView" />
+
+    <Button
+        android:id="@+id/buttonSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_gallery"
+        android:drawablePadding="-10sp"
+        android:text="@string/select"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_below="@id/imageView"
+        android:layout_alignRight="@id/imageView" />
+
+
+</RelativeLayout>

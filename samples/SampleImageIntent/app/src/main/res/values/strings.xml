@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">SampleImageIntent</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_desc">This sample app shows you how to use intent to start the camera or gallery app, then set a image with selection</string>
+    <string name="select">Select</string>
+    <string name="camera">Camera</string>
+
+</resources>
