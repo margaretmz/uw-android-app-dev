@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">SampleIntentFilter</string>
+    <string name="app_desc">Thanks for starting this app with Intent Filter</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
