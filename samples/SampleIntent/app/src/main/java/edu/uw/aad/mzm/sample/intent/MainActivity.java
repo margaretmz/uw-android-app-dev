@@ -51,10 +51,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
      */
     private void shareText() {
 
-        Intent intent = new Intent(android.content.Intent.ACTION_SEND);
-        intent.setType("vnd.android-dir/mms-sms");                  // sms
+        Intent intent = new Intent(Intent.ACTION_SEND);
+//        intent.setType("vnd.android-dir/mms-sms");                  // sms
 //        intent.setType("text/plain");                             // plain text
-//        intent.setType("text/html");                              // html
+        intent.setType("text/html");                              // html
         intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "What is an Intent?");                    // set email subject
         intent.putExtra(android.content.Intent.EXTRA_TEXT, "Today we're are learning about intent..."); // set email body
 

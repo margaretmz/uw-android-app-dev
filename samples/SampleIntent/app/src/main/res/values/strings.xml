@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SampleIntent</string>
 
-    <string name="app_desc">This app shows a few use cases of Android Intent.</string>
+    <string name="app_desc">This app shows a few use cases of the Android (Implicit) Intent.</string>
     <string name="action_share">Share</string>
     <string name="title_activity_share">ShareActivity</string>
     <string name="title_activity_camera">CameraActivity</string>
