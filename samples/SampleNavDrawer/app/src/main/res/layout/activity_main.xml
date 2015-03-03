@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Includes a Toolbar (as top ActionBar)-->
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <!-- Main content on screen -->
+        <RelativeLayout
+            android:id="@+id/contentRL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_desc" />
+
+        </RelativeLayout>
+
+        <!-- Navigation drawer -->
+        <RelativeLayout
+            android:id="@+id/drawerRL"
+            android:layout_gravity="left|start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Drawer ListView -->
+            <ListView
+                android:id="@+id/drawerList"
+                android:layout_width="240dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:divider="#d4d4d6"
+                android:background="#ffffff"
+                android:dividerHeight="1dp" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

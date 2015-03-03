@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">SampleNavDrawer</string>
+    <string name="app_desc">This app has a Navigation drawer together with a Toolbar.</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+
+</resources>
