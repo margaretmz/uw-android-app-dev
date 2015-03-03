@@ -38,12 +38,13 @@ public class AndroidDbHelper extends SQLiteOpenHelper {
 
     // SQL statement to create the Version table
     private final static String VERSION_TABLE_CREATE =
-            "CREATE TABLE " + VERSION_TABLE_NAME + " (" +
+                    "CREATE TABLE " +
+                    VERSION_TABLE_NAME + " (" +
                     VERSION_ROW_ID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
                     VERSION_ROW_CODE_NAME + " TEXT, " +
                     VERSION_ROW_VERSION_NO + " TEXT, " +
                     VERSION_ROW_API_LEVEL + " TEXT, " +
-                    VERSION_ROW_RELEASE_DATE + "TEXT, " +
+                    VERSION_ROW_RELEASE_DATE + " TEXT, " +
                     VERSION_ROW_FEATURES + " TEXT" + ");";
 
     public AndroidDbHelper(Context context) {
@@ -130,9 +131,10 @@ public class AndroidDbHelper extends SQLiteOpenHelper {
         AndroidVersion androidVersion = new AndroidVersion();
         androidVersion.setId(cursor.getInt(0));
         androidVersion.setCodeName(cursor.getString(1));
-        androidVersion.setApiLevel(cursor.getString(2));
-        androidVersion.setReleaseDate(cursor.getString(3));
-        androidVersion.setFeatures(cursor.getString(4));
+        androidVersion.setVersionNo(cursor.getString(2));
+        androidVersion.setApiLevel(cursor.getString(3));
+        androidVersion.setReleaseDate(cursor.getString(4));
+        androidVersion.setFeatures(cursor.getString(5));
 
         return androidVersion;
     }
