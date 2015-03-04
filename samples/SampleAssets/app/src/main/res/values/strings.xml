@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">SampleAssets</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_desc">This sentence is styled with a custom font, which is stored in the assets folder.</string>
     <string name="action_settings">Settings</string>
 
 </resources>

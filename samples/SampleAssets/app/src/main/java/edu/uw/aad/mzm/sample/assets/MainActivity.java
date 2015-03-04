@@ -1,9 +1,11 @@
 package edu.uw.aad.mzm.sample.assets;
 
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,6 +14,15 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Get the font
+//        Typeface tfDroidSerif = Typeface.createFromAsset(getAssets(), "fonts/DroidSerif.ttf");
+        Typeface tfLobster = Typeface.createFromAsset(getAssets(), "fonts/Lobster.otf");
+
+        TextView textViewAppDesc = (TextView)findViewById(R.id.textViewAppDesc);
+
+        // Set the font on TextView
+        textViewAppDesc.setTypeface(tfLobster);
     }
 
 
