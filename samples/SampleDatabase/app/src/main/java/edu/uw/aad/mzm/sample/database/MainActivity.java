@@ -5,11 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
+import android.widget.Toast;
 import java.util.List;
-
 import edu.uw.aad.mzm.sample.database.data.AndroidContract;
 import edu.uw.aad.mzm.sample.database.data.AndroidDbHelper;
 import edu.uw.aad.mzm.sample.database.model.AndroidVersion;
@@ -22,7 +23,7 @@ import edu.uw.aad.mzm.sample.database.model.AndroidVersion;
  * 2. Create a class that extends SQLiteOpenHelper
  * 3. Use the Database helper class to create & manage db
  */
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
 
     private AndroidDbHelper mDbHelper;
     private List<AndroidVersion> androidVersionList;
@@ -44,12 +45,15 @@ public class MainActivity extends ActionBarActivity {
         // Get all the Android Versions data from db
         androidVersionList = mDbHelper.getAndroidVersions();
 
+
         // Set up UI ListView
         mListViewAndroid = (ListView)findViewById(R.id.listViewAndroid);
         mAndroidArrayAdapter = new ArrayAdapter<AndroidVersion>(this,  // context
                 android.R.layout.simple_list_item_1,                        // UI layout
                 androidVersionList);                                                     // objects
         mListViewAndroid.setAdapter(mAndroidArrayAdapter);
+
+        mListViewAndroid.setOnItemClickListener(this);
     }
 
     @Override
@@ -78,5 +82,12 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+        Toast.makeText(this, "Item position in list is " + position, Toast.LENGTH_LONG).show();
+
     }
 }
