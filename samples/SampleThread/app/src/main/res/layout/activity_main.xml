@@ -9,17 +9,28 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
+    <!-- App description -->
     <TextView
-        android:id="@+id/textView"
-        android:text="Initial text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/app_desc"
         android:layout_marginBottom="16dp"/>
 
+    <!-- A button for creating a new thread -->
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="RUN New Thread"/>
+        android:text="Update Text with a new thread"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- A TextView that to be updated by a new thread -->
+    <TextView
+        android:id="@+id/textView"
+        android:text="Initial text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal"/>
 
 </LinearLayout>

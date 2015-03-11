@@ -1,26 +1,31 @@
 package edu.uw.aad.mzm.sample.thread;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.ActionBarActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-
-
+/**
+ * Created by Margaret ton 3/9/2015
+ * This sample app shows 3 ways to communicate from non UI thread back to UI:
+ * 1. use Activity.runOnUiThread(Runnable)
+ * 2. use View.post(Runnable)
+ * 3. use a Handler
+ */
 public class MainActivity extends ActionBarActivity {
 
     private TextView mTextView;
-
+    private ProgressDialog mProgressDialog;
     private Handler mHandler = new Handler() {
 
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            mTextView.setText("New text by Handler");
+            mTextView.setText("TextView updated by Handler");
+            dismissProgressDialog();
         }
     };
 
@@ -28,10 +33,18 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         mTextView = (TextView)findViewById(R.id.textView);
+
+        mProgressDialog = new ProgressDialog(this);
+        mProgressDialog.setTitle("Please wait...");
+        mProgressDialog.setMessage("Updating text...");
+
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Show a Progress Dialog
+                mProgressDialog.show();
                 Runnable runnable = new Runnable() {
                     @Override
                     public void run() {
@@ -43,21 +56,12 @@ public class MainActivity extends ActionBarActivity {
                             e.printStackTrace();
                         }
 
-                        // This doesn't work, can't update UI from here.
+                        // This doesn't work, can't update UI from a non-UI thread
 //                        mTextView.setText("Let's try to set text from the new thread");
 
-/*                        mTextView.post(new Runnable() {
-                            @Override
-                            public void run() {
-
-                                mTextView.setText("New Text by View.post(Runable)");
-
-                            }
-                        });*/
-
-                        updateUIwithrunOnUiThread();
-
-//                        updateUIwithHandler();
+//                        updateUIWithRunOnUiThread();
+//                        updateUIWithPost();
+                        updateUIWithHandler();
 
                     }
                 }; // end runnable
@@ -69,41 +73,45 @@ public class MainActivity extends ActionBarActivity {
         });
     }
 
-    private void updateUIwithHandler() {
-        mHandler.sendEmptyMessage(0);
-    }
-
     /**
-     * Use runOnUiThread() to update UI
+     * Use Activity.runOnUiThread() to update UI
      */
-    private void updateUIwithrunOnUiThread() {
+    private void updateUIWithRunOnUiThread() {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                mTextView.setText("Text updated by runOnUiThread");
+                mTextView.setText("TextView updated by runOnUiThread");
+                dismissProgressDialog();
             }
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    /**
+     * Use View.post to update UI
+     */
+    private void updateUIWithPost() {
+        mTextView.post(new Runnable() {
+            @Override
+            public void run() {
+                mTextView.setText("TextView updated by View.post(Runnable)");
+                dismissProgressDialog();
+            }
+        });
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    /**
+     * Use a Handler to update UI
+     */
+    private void updateUIWithHandler() {
+        mHandler.sendEmptyMessage(0);
+    }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    /**
+     * Dismiss Progress Dialog if showing
+     */
+    private void dismissProgressDialog() {
+        if(mProgressDialog.isShowing()) {
+            mProgressDialog.dismiss();
         }
-
-        return super.onOptionsItemSelected(item);
     }
 }

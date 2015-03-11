@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">SampleThread</string>
-
-    <string name="hello_world">Hello world!</string>
+    <string name="app_desc">This sample app shows how to communicate from a non-IU thread back to  the UI thread.</string>
     <string name="action_settings">Settings</string>
 </resources>
