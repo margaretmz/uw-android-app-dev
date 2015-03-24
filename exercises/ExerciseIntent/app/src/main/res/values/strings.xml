@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ExerciseIntent</string>
+    <string name="hello_world"> hello</string>
+    <string name="app_desc">This is an exercise for using startActivityForResult().</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_activity_b">ActivityB</string>
+</resources>
