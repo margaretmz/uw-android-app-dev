@@ -1,0 +1,110 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="@string/app_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- BitmapDrawable, used as a LinearLayout background-->
+        <TextView
+            android:text="BitmapDrawable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/mirror" />
+
+        <!-- ShapeDrawable, used as background -->
+        <TextView
+            android:text="ShapeDrawable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_margin="12dp">
+
+            <!-- A TextView with circle background -->
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/circle"
+                android:text="Circle"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginRight="12dp" />
+            <!--A TextView with a rectangle background-->
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rectangle"
+                android:text="Circle"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- StateListDrawable, used as a button background -->
+        <TextView
+            android:text="StateListDrawable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:background="@drawable/button" />
+
+        <!-- NinePatchDrawable, used as a button background-->
+        <TextView
+            android:text="NinePatchDrawable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+        <!-- A green button, fuzzy after stretched -->
+        <!-- Use nine-patch 9.png instead-->
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/green_button_original"
+            android:text="OK" />
+
+    </LinearLayout>
+</ScrollView>
