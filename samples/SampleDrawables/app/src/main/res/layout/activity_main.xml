@@ -57,18 +57,25 @@
                 android:background="@drawable/circle"
                 android:text="Circle"
                 android:textSize="12sp"
-                android:textColor="@color/white"
                 android:gravity="center"
+                android:textColor="@color/white"
                 android:layout_marginRight="12dp" />
+
             <!--A TextView with a rectangle background-->
             <TextView
                 android:layout_width="80dp"
                 android:layout_height="40dp"
                 android:background="@drawable/rectangle"
-                android:text="Circle"
+                android:text="Rectangle"
                 android:textSize="12sp"
                 android:textColor="@color/white"
-                android:gravity="center" />
+                android:gravity="center"
+                android:layout_marginRight="12dp"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_android"
+                android:background="@drawable/circle"/>
 
         </LinearLayout>
 
@@ -103,7 +110,7 @@
             android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/green_button_original"
+            android:background="@drawable/green_button"
             android:text="OK" />
 
     </LinearLayout>
