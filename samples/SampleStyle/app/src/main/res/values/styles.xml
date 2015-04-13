@@ -1,0 +1,61 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo">
+
+        <!-- Customize your theme here. -->
+        <item name="android:buttonStyle">@style/CustomButton</item>
+        <item name="android:editTextStyle">@style/CustomEditText</item>
+        <item name="android:textViewStyle">@style/CustomTextView</item>
+        <item name="android:progressBarStyleHorizontal">@style/CustomProgressBar</item>
+        <item name="android:windowBackground">@drawable/background</item>
+    </style>
+
+    <!-- This button style inherits from "@android:style/Widget.Button"-->
+    <style name="CustomButton" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/button</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textAppearance">@style/CustomButtonTextAppearance</item>
+    </style>
+
+    <!-- This special button style inherits from Theme.Custom.Button -->
+    <style name="CustomButton.Special" >
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:textColor">#ff0000</item>
+    </style>
+
+    <style name="CustomEditText" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/edittext</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textAppearance">@style/CustomEditTextTextAppearance</item>
+    </style>
+
+    <style name="CustomProgressBar" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="CustomTextView" parent="@android:style/Widget.TextView">
+        <item name="android:padding">12dp</item>
+        <item name="android:textAppearance">@style/CustomTextViewTextAppearance</item>
+    </style>
+
+    <!-- Overriding TextAppearanceSmall-->
+<!--    <style name="CustomTextAppearanceSmall" parent="@android:style/TextAppearance.Small">
+    </style>-->
+
+    <style name="CustomButtonTextAppearance">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="CustomEditTextTextAppearance">
+        <item name="android:textColor">@color/purple</item>
+    </style>
+
+    <style name="CustomTextViewTextAppearance">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+</resources>
