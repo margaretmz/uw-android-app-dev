@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SampleLocalization</string>
+    <string name="greeting">你好!</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="signin">登入</string>
+    <string name="policy_privacy">注册该应用有效的电子邮件地址。数据可以被用于定制和改进在本应用中的用户体验。</string>
+    <string name="upgrade">升级到Pro版!</string>
+</resources>

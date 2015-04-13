@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SampleLocalization</string>
+    <string name="greeting">Bonjour!</string>
+    <string name="username">Nom d\'utilisateur</string>
+    <string name="password">Mot de passe</string>
+    <string name="signin">Se connecter</string>
+    <string name="policy_privacy">L\'inscription à cette demande une adresse email valide. Les données peuvent être utilisées pour personnaliser et améliorer votre expérience de l\'utilisateur dans cette application.</string>
+    <string name="upgrade">Mise à niveau vers Pro!</string>
+</resources>
