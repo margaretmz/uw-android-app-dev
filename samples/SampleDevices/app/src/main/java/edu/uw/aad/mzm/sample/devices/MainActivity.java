@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -19,6 +20,7 @@ import java.util.Locale;
 public class MainActivity extends ActionBarActivity {
 
     private TextView mTextView;
+    private boolean hasCamera;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,17 +56,15 @@ public class MainActivity extends ActionBarActivity {
             sb.append("\nFacebook is not installed");
         }
 
-
-        // 5. Check to see if we have a camera
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        String cameraPackageName = intent.resolveActivity(getPackageManager()).getPackageName();
-        try {
-            getPackageManager().getPackageInfo(cameraPackageName, PackageManager.GET_META_DATA);
-            sb.append("\nA camera is available");
-        } catch (PackageManager.NameNotFoundException e) {
-            sb.append("\nA camera is not available");
+        // 5. Check to see if we have a camera hardware
+        PackageManager packageManager = this.getPackageManager();
+        if(packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA)) {
+            sb.append("\nDevice has camera");
+            hasCamera = true;
+        } else {
+            sb.append("\nDevice has no camera");
+            hasCamera = false;
         }
-
 
         // Display information in TextView
         mTextView.setText(sb.toString());
@@ -86,8 +86,13 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_camera) {
+            if(hasCamera) {
+                Toast.makeText(this, "Open camera app", Toast.LENGTH_LONG).show();
+                //TODO: open camera app
+            } else {
+                Toast.makeText(this, "Device has no camera", Toast.LENGTH_LONG).show();
+            }
         }
 
         return super.onOptionsItemSelected(item);

@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.uw.aad.mzm.sample.devices" >
 
-    <!-- App uses the camera but it's not required -->
+    <!-- App uses the camera although it's not required -->
     <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <!-- App requires device to have a microphone in order to install -->
+    <uses-feature android:name="android.hardware.microphone" />
 
     <application
         android:allowBackup="true"

@@ -7,14 +7,26 @@
     tools:context=".MainActivity"
     android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textViewAppDesc"
+    <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:text="@string/app_desc"
-        android:textAppearance="@android:style/TextAppearance.Medium"
-        android:layout_marginRight="12dp"/>
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/textViewAppDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_desc"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"/>
+        <ImageView
+            android:id="@+id/imageViewRobot"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:layout_below="@id/textViewAppDesc"
+            android:src="@drawable/ic_android"
+            android:background="@drawable/circle"/>
+        </RelativeLayout>
 
     <TextView
         android:id="@+id/textViewDeviceInfo"

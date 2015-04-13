@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -10,19 +10,27 @@
     <TextView
         android:id="@+id/textViewAppDesc"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:text="@string/app_desc"
         android:textAppearance="@android:style/TextAppearance.Medium"
-        android:layout_marginRight="12dp"/>
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"/>
+
+    <ImageView
+        android:id="@+id/imageViewRobot"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:layout_below="@id/textViewAppDesc"
+        android:layout_weight="1"
+        android:src="@drawable/ic_android"
+        android:background="@drawable/circle"/>
 
     <TextView
         android:id="@+id/textViewDeviceInfo"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:layout_toRightOf="@id/textViewAppDesc"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewRobot"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:text="Device Info"/>
 
-</LinearLayout>
+</RelativeLayout>
