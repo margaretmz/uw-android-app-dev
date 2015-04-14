@@ -20,8 +20,8 @@
 
     <!-- This special button style inherits from Theme.Custom.Button -->
     <style name="CustomButton.Special" >
-        <item name="android:layout_width">200dp</item>
-        <item name="android:layout_height">200dp</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
         <item name="android:textColor">#ff0000</item>
     </style>
 
