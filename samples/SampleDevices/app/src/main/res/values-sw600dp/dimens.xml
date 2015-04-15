@@ -4,12 +4,11 @@
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
     <dimen name="activity_horizontal_margin">64dp</dimen>
 
-    <!--
     <dimen name="margin_tiny">8dp</dimen>
     <dimen name="margin_small">10dp</dimen>
     <dimen name="margin_medium">14dp</dimen>
     <dimen name="margin_large">18dp</dimen>
     <dimen name="margin_huge">20dp</dimen>
 
-    <dimen name="image_size">200dp</dimen>-->
+    <dimen name="image_size">200dp</dimen>
 </resources>
