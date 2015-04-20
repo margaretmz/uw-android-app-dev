@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SampleMasterDetail</string>
+    <string name="title_androidversion_detail">AndroidVersion Detail</string>
+</resources>
