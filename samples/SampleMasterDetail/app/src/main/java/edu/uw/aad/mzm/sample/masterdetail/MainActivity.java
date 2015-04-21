@@ -12,10 +12,10 @@ import android.support.v7.app.ActionBarActivity;
  *
  * Main activity representing a list of AndroidVersions. This activity
  * has different presentations for handset and tablet-size devices.
- * - On handsets, the activity presents a list of items, which when touched,
- * lead to a {@link VersionDetailActivity} representing item details.
- * - On tablets, the activity presents the list of items and
- * item details side-by-side using two vertical panes: {@link VersionListFragment} and {@link VersionDetailFragment}
+ * - On handsets, the activity presents a list, which when touched,
+ * leads to a details screen {@link VersionDetailActivity}
+ * - On tablets, the activity presents the list and item details side-by-side
+ * using two vertical panes: {@link VersionListFragment} and {@link VersionDetailFragment}
  *
  * This activity also implements the required {@link VersionListFragment.Callbacks} interface
  * to listen for item selections.
@@ -33,14 +33,14 @@ public class MainActivity extends ActionBarActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (findViewById(R.id.androidversion_detail_container) != null) {
+        if (findViewById(R.id.version_detail_container) != null) {
             // The detail container view will be present only in the large-screen layouts (res/values-large and
             // res/values-sw600dp). If this view is present, then the activity should be in two-pane mode.
             mTwoPane = true;
 
             // In two-pane mode, list items should be given the 'activated' state when touched.
             ((VersionListFragment) getSupportFragmentManager()
-                    .findFragmentById(R.id.androidversion_list))
+                    .findFragmentById(R.id.version_list))
                     .setActivateOnItemClick(true);
         }
 
@@ -60,7 +60,7 @@ public class MainActivity extends ActionBarActivity
             VersionDetailFragment fragment = new VersionDetailFragment();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.androidversion_detail_container, fragment)
+                    .replace(R.id.version_detail_container, fragment)
                     .commit();
 
         } else {

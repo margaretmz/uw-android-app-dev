@@ -44,7 +44,7 @@ public class VersionDetailActivity extends ActionBarActivity {
             VersionDetailFragment fragment = new VersionDetailFragment();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.androidversion_detail_container, fragment)
+                    .add(R.id.version_detail_container, fragment)
                     .commit();
         }
     }

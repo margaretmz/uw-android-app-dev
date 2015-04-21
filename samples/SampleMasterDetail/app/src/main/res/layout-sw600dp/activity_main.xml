@@ -1,3 +1,5 @@
+<!--On larger screens, the main screen has two panes -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,21 +12,18 @@
     android:showDividers="middle"
     tools:context=".AndroidVersionListActivity">
 
-    <!--
-    This layout is a two-pane layout for the AndroidVersions
-    master/detail flow.
-    -->
-
+    <!-- A fragment added statically -->
     <fragment
-        android:id="@+id/androidversion_list"
+        android:id="@+id/version_list"
         android:name="edu.uw.aad.mzm.sample.masterdetail.VersionListFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         tools:layout="@android:layout/list_content" />
 
+    <!-- A fragment added dynamically -->
     <FrameLayout
-        android:id="@+id/androidversion_detail_container"
+        android:id="@+id/version_detail_container"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="3" />

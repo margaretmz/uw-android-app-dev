@@ -1,6 +1,8 @@
+<!-- On handsets, the VersionListFragment is included in the Activity layout statically -->
+
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/androidversion_list"
+    android:id="@+id/version_list"
     android:name="edu.uw.aad.mzm.sample.masterdetail.VersionListFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
