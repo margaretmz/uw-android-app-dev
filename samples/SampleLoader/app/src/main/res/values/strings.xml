@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SampleLoader</string>
+    <string name="app_desc">Sample App demos how to use a CursorLoader to load data from Contacts Content Provider</string>
+    <string name="action_settings">Settings</string>
+</resources>
