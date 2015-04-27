@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SampleViewHierarchy</string>
+    <string name="app_desc">A sample app with deep hierarchy of unnecessary nested layouts. Use HierarchyViewer to see the hierarchy.</string>
+    <string name="action_settings">Settings</string>
+</resources>
