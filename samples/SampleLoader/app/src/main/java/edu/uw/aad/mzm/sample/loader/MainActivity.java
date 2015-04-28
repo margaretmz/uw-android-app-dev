@@ -15,9 +15,10 @@ import android.widget.SimpleCursorAdapter;
  * Sample App that demos how to load Contacts Content Provider with a CursorLoader
  *
  * 1. Create a class extends from ListActivity
- * 2. Create a SimpleCursorAdapter
+ * 2. Use a SimpleCursorAdapter for the list
  * 3. Implement LoaderManager.LoaderCallbacks<Cursor>
- * 4. Implement onCreateLoader(), on LoadFinished() and onLoaderReset()
+ * 4. Initialize loader
+ * 5. Implement onCreateLoader(), on LoadFinished() and onLoaderReset()
  */
 public class MainActivity extends ListActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
@@ -44,10 +45,18 @@ public class MainActivity extends ListActivity implements LoaderManager.LoaderCa
 
         setListAdapter(mAdapter);
 
+        // Initialized Loader for the background query
         getLoaderManager().initLoader(0, null, this);
     }
 
 
+    /**
+     * Create CursorLoader against Content Provider,
+     * & Start the background query
+     * @param id
+     * @param args
+     * @return
+     */
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
 
@@ -59,6 +68,8 @@ public class MainActivity extends ListActivity implements LoaderManager.LoaderCa
 
         String selection = "((" + ContactsContract.Contacts.DISPLAY_NAME + " NOTNULL) AND ("
                 + ContactsContract.Contacts.DISPLAY_NAME + " != '' ))";
+
+        // Returns a new CursorLoader
         return new CursorLoader(this,
                 ContactsContract.CommonDataKinds.Email.CONTENT_URI, // make sure the set the correct Content URI
                 projection,
@@ -68,15 +79,28 @@ public class MainActivity extends ListActivity implements LoaderManager.LoaderCa
                 );
     }
 
+    /**
+     * Background query complete
+     * @param loader
+     * @param data
+     */
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
 
+        // Move query results to adapter and refresh UI
         mAdapter.swapCursor(data);
 
     }
 
+    /**
+     * Invoked when the CursorLoader is being reset.
+     * Called if the data in Content Provider changes and the Cursor becomes stale or invalid
+     * @param loader
+     */
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
+
+        // Remove the adapter's reference to the cursor to prevent memory leak
         mAdapter.swapCursor(null);
 
     }
