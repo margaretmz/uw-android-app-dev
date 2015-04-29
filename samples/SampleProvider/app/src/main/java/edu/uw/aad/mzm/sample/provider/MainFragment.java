@@ -1,7 +1,11 @@
 package edu.uw.aad.mzm.sample.provider;
 
+import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
@@ -12,6 +16,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
@@ -43,8 +48,8 @@ public class MainFragment extends ListFragment implements
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-        String[] fromFields = {AndroidContract.Version.CODE_NAME};
-        int[] toFields = {android.R.id.text1};
+        String[] fromFields = new String[] {AndroidContract.Version.CODE_NAME};
+        int[] toFields = new int[] {android.R.id.text1};
 
         getLoaderManager().initLoader(0, null, this);
 
@@ -121,5 +126,16 @@ public class MainFragment extends ListFragment implements
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+
+        Intent intent = new Intent(getActivity(), DetailActivity.class);
+        Uri uri = Uri.parse(AndroidContract.Version.CONTENT_URI + "/" + id);
+        intent.putExtra("uri", uri);
+        startActivity(intent);
+
+        super.onListItemClick(l, v, position, id);
     }
 }
