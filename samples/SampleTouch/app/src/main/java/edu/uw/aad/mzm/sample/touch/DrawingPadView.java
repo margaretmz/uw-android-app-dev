@@ -31,15 +31,17 @@ public class DrawingPadView extends View {
         mBorderPaint = new Paint();
         mPath = new Path();
 
+        // Set up the Paint for drawing
         mDrawingPaint.setAntiAlias(true);                                  // Smooth out the line
-        mDrawingPaint.setStrokeWidth(10);                                  // Set the line width
+        mDrawingPaint.setStrokeWidth(15);                                  // Set the line width
         mDrawingPaint.setColor(getResources().getColor(R.color.indigo));   // Set the paint color
         mDrawingPaint.setStyle(Paint.Style.STROKE);                        // Set the style to solid line
         mDrawingPaint.setStrokeJoin(Paint.Join.ROUND);                     // Set line end to be round
 
+        // Set up the Paint for the border
         mBorderPaint.setColor(getResources().getColor(R.color.purple));
         mBorderPaint.setStyle(Paint.Style.STROKE);
-        mBorderPaint.setStrokeWidth(8);
+        mBorderPaint.setStrokeWidth(20);
     }
 
     @Override
