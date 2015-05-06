@@ -11,7 +11,7 @@ import android.widget.ImageView;
 /**
  * Created by Margaret on 5/4/2015
  *
- * This sample app demos how imageViewTo drag and drop a ImageView
+ * This sample app demos how to drag and drop a ImageView
  */
 public class MainActivity extends ActionBarActivity {
 
@@ -30,8 +30,11 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public boolean onLongClick(View v) {
                 ClipData dragData = ClipData.newPlainText("icon", "ic_android");
+                // Create a drag shadow
                 View.DragShadowBuilder dragShadow = new View.DragShadowBuilder(imageViewFrom);
+                // Start dragging
                 v.startDrag(dragData, dragShadow, null, 0);
+                // Hide the view that is being dragged from
                 v.setVisibility(View.INVISIBLE);
                 return true;
             }
@@ -48,10 +51,10 @@ public class MainActivity extends ActionBarActivity {
 
             switch (event.getAction()) {
                 case DragEvent.ACTION_DROP:
+                    // Set the android icon on the destination ImageView
                     imageViewTo.setImageResource(R.drawable.ic_android);
+                    // Force ImageView to redraw
                     imageViewTo.invalidate();
-                    imageViewFrom.setImageDrawable(null);
-                    imageViewFrom.invalidate();
                 default:
                     return true;
             }
