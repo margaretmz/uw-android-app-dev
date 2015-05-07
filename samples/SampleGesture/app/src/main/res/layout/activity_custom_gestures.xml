@@ -6,21 +6,21 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity"
+    tools:context="edu.uw.aad.mzm.sample.gesture.CustomGesturesActivity"
     android:orientation="vertical">
 
     <TextView
-        android:text="@string/app_desc"
+        android:id="@+id/textViewCustomGesturesDesc"
+        android:text="@string/custom_gestures_desc"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"/>
 
-    <View
-        android:id="@+id/touchView"
+    <android.gesture.GestureOverlayView
+        android:id="@+id/gestures"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
-        android:background="#ddddff"
-        android:layout_margin="50dp" />
+        android:layout_weight="6"
+        android:background="@android:color/background_light"/>
 
 </LinearLayout>

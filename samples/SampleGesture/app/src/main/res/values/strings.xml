@@ -3,4 +3,9 @@
 
     <string name="app_desc">Sample app for gesture. </string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_common_gesture">Common Gestures</string>
+    <string name="title_activity_custom_gesture">Custom Gestures</string>
+    <string name="common_gestures_desc">Touch the View below for these gestures: Fling, Single tap, Double tap, and Long press</string>
+    <string name="custom_gestures_desc">Touch (or draw) the area below for these custom gestures: Up, Down, Left, Right, Circle, and Wave</string>
+
 </resources>

@@ -12,10 +12,20 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CommonGesturesActivity"
+            android:label="@string/title_activity_common_gesture"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+            android:name=".CustomGesturesActivity"
+            android:label="@string/title_activity_custom_gesture"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
     </application>
 
 </manifest>
