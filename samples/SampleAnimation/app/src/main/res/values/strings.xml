@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SampleAnimation</string>
+
+    <string name="app_desc">This sample app demos Drawable Animation, View Animation and Property Animation</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_drawable_animation">Drawable Animation</string>
+    <string name="title_activity_view_animation">View Animation</string>
+    <string name="title_activity_property_animation">Property Animation</string>
+
+</resources>
