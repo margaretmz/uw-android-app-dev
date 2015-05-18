@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SampleNotification</string>
+
+    <string name="app_desc">This sample app demos Andorid notifications</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_parent">ParentActivity</string>
+
+    <string name="child_activity">This is the child activity</string>
+    <string name="parent_activity">This is the parent activity</string>
+    <string name="title_activity_detail">DetailActivity</string>
+</resources>
