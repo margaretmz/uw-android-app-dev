@@ -13,19 +13,22 @@ import android.view.View;
 /**
  * Created by Margaret on 5/18/2015
  *
- * This sample demos a few basic concepts of Android notifications:
- * - create a notification
- * - update a notification
- * - dismiss a notification
+ * This sample demos a few basic concepts of Android Notifications:
+ * - create a Notification
+ * - update a Notification
+ * - dismiss one Notification or all Notifications
+ * - synthesize backstack for navigation
  */
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
 
-    // Unique (within app) ID for email notification
+    // Unique (within app) ID for email Notification
     public static final int EMAIL_NOTIFICATION_ID = 1;
 
+    // Notification ID for recipe
     public static final int RECIPE_NOTIFICATION_ID = 2;
 
+    // Use NotificationCompat for backwards compatibility
     private NotificationManagerCompat mNotificationManager;
 
     @Override
@@ -70,10 +73,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     private void showBasicNotification() {
 
-        // Create a PendingIntent
+
+        // Create an Intent
         Intent intent = new Intent(this, ChildActivity.class);
 
-
+        // Create a PendingIntent
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
 
         // Build the notification
@@ -90,15 +94,18 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         mNotificationManager.notify(EMAIL_NOTIFICATION_ID, basicNotification);
     }
 
+    /**
+     * Update an existing Notification
+     */
     private void updateBasicNotification() {
 
-        // Create a PendingIntent
+        // Create an Intent
         Intent intent = new Intent(this, ChildActivity.class);
 
-
+        // Create a PendingIntent
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
 
-        // Build the notification
+        // Build the Notification
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
         builder.setSmallIcon(R.drawable.ic_mail);
         builder.setContentTitle("Updated: You have a new email");
@@ -106,21 +113,29 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         builder.setContentIntent(pendingIntent);
         builder.setAutoCancel(true);
 
-        // Create the notification
+        // Create the Notification
         Notification basicNotification = builder.build();
 
+        // Note we use the same EMAIL_NOTIFICATION_ID to identify an existing Notification
         mNotificationManager.notify(EMAIL_NOTIFICATION_ID, basicNotification);
 
     }
 
+    /**
+     * Cancels notification(s)
+     */
     private void cancelBasicNotification() {
 
-        mNotificationManager.cancel(EMAIL_NOTIFICATION_ID);
+        // Cancels one notification
+//        mNotificationManager.cancel(EMAIL_NOTIFICATION_ID);
+
+        // Cancels all my notifications
+        mNotificationManager.cancelAll();
     }
 
 
     /**
-     * Creates a notification demos how TaskStackBuilder works
+     * Creates a notification that demos how TaskStackBuilder works
      */
     private void createNotificationWithBackstack() {
 
@@ -139,7 +154,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         // Create the PendingIntent
         PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
 
-        // Build the notification
+        // Build the Notification
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
         builder.setSmallIcon(R.drawable.ic_restaurant);
         builder.setContentTitle("Check out this new Chinese restaurant");
@@ -147,7 +162,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         builder.setContentIntent(pendingIntent);
         builder.setAutoCancel(true);
 
-        // Create the notification
+        // Create the Notification
         Notification basicNotification = builder.build();
 
         mNotificationManager.notify(RECIPE_NOTIFICATION_ID, basicNotification);
