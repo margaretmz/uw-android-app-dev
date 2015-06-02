@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.uw.aad.mzm.sample.media.AudioRecordActivity"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/button1RecordAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Record Audio via Intent"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button1RecordAudio"
+        android:layout_marginBottom="16dp"
+        android:text="Record with MediaRecorder:"
+        android:textAppearance="@android:style/TextAppearance.Large"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/startAudioRecord"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Record Audio"
+            android:drawableLeft="@drawable/ic_av_record"/>
+
+        <Button
+            android:id="@+id/stopAudioRecord"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Stop Audio"
+            android:drawableLeft="@drawable/ic_av_stop"/>
+
+
+        <Button
+            android:id="@+id/playAudioRecord"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Play Audio"
+            android:drawableLeft="@drawable/ic_av_play"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

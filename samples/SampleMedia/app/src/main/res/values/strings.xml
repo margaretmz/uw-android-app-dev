@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SampleMedia</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="play_audio">Play Audio</string>
+    <string name="record_audio">Record Audio</string>
+    <string name="play_video">Play Video</string>
+    <string name="record_video">Record Video</string>
+
+    <string name="buttonPlayAssetMID1">Play MIDI Asset 1</string>
+    <string name="buttonPlayAssetMID2">Play MIDI Asset 2</string>
+    <string name="buttonPlayAssetOGG">Play OGG Asset</string>
+    <string name="buttonPlayRawOGG">Play OGG Raw</string>
+    <string name="buttonLoopMP3">Loop MP3</string>
+    <string name="buttonPlayHit">Play Hit</string>
+    <string name="buttonPlayRingtone">Play Ringtone</string>
+    <string name="title_activity_audio_play">AudioPlayActivity</string>
+    <string name="title_activity_audio_record">AudioRecordActivity</string>
+    <string name="title_activity_video_play">VideoPlayActivity</string>
+    <string name="title_activity_video_record">VideoRecordActivity</string>
+
+</resources>
