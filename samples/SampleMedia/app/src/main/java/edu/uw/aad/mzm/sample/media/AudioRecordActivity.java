@@ -4,13 +4,12 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
+import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import java.io.File;
@@ -51,7 +50,7 @@ public class AudioRecordActivity extends ActionBarActivity implements View.OnCli
             startActivityForResult(intent, CAPTURE_AUDIO);
         } catch (ActivityNotFoundException e) {
             Toast.makeText(this, "No app found to record audio", Toast.LENGTH_LONG).show();
-        }
+    }
 
     }
 
@@ -133,7 +132,7 @@ public class AudioRecordActivity extends ActionBarActivity implements View.OnCli
         String fileName = UUID.randomUUID().toString().substring(0, 6).concat(".3gp");
         mFileName = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + fileName;
 
-        mMediaRecorder.setAudioSource(MediaRecorder.AudioSource.DEFAULT);
+        mMediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         mMediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
         mMediaRecorder.setOutputFile(mFileName);
         mMediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
